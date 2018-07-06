@@ -1,0 +1,8 @@
+                    <input onkeypress="return disallowDot(event);" ng-blur='dialogData.ReceivedQuantity = dialogData.BillQuantity' data-ng-model="dialogData.BillQuantity" class="form-control input-box" type='number' pattern="[0-9][0-9]*" min="0" name='uBillQuantity' required placeholder="BillQuantity" />
+
+
+
+function disallowDot(event) {
+    return (event.which || event.keyCode) == 46 ? false : true;     
+}
+
